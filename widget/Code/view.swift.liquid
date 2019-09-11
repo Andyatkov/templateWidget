@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.name }}Widget{{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -10,12 +10,12 @@ import Common
 import Composer
 import UIKit
 
-protocol I{{ module_info.name }}View: AnyObject {
+protocol I{{ module_info.name }}WidgetView: AnyObject {
 
     func showWidget(viewModel: {{ module_info.name }}WidgetDTO.ViewModel)
 }
 
-class {{ module_info.name }}View: UIView {
+class {{ module_info.name }}WidgetView: UIView {
 
     var interactor: I{{ module_info.name }}Interactor!
 
@@ -27,7 +27,7 @@ class {{ module_info.name }}View: UIView {
 
 // MARK: - IWidgetViewConfigurable
 
-extension {{ module_info.name }}View: IWidgetViewConfigurable {
+extension {{ module_info.name }}WidgetView: IWidgetViewConfigurable {
 
     func update(widget: Widget) {
         let request = {{ module_info.name }}WidgetDTO.Request(widget: widget)
@@ -41,7 +41,7 @@ extension {{ module_info.name }}View: IWidgetViewConfigurable {
 
 // MARK: - ITitleWidgetView
 
-extension {{ module_info.name }}View: I{{ module_info.name }}View {
+extension {{ module_info.name }}WidgetView: I{{ module_info.name }}WidgetView {
 
     func showWidget(viewModel: {{ module_info.name }}WidgetDTO.ViewModel) {
     }

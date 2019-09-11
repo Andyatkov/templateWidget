@@ -24,7 +24,7 @@ struct {{ module_info.name }}Assembly: IWidgetAssembly {
     }
 
     func buildWidgetView(with model: Widget) -> IWidgetViewConfigurable {
-        let view = {{ module_info.name }}View.loadFromNib()
+        let view = {{ module_info.name }}WidgetView.loadFromNib()
         let state = {{ module_info.name }}WidgetState(widget: model)
         let worker = {{ module_info.name }}Worker(state: state)
         let presenter = {{ module_info.name }}Presenter(view: view)

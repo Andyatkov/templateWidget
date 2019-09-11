@@ -26,6 +26,9 @@ code_files:
 # View
 - {name: View.swift, path: widget/Code/view.swift.liquid}
 
+# Xib
+- {name: View.xib, path: widget/Code/view.xib.liquid}
+
 # Worker
 - {name: Worker.swift, path: widget/Code/worker.swift.liquid}
 
