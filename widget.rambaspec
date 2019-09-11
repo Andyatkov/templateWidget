@@ -1,0 +1,37 @@
+# Template information section
+name: "widget"
+summary: "Swift Widget module template"
+author: "Andrey Dyatkov"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for widget/Code files
+
+code_files:
+# Widget
+- {name: Widget.swift, path: widget/Code/widget.swift.liquid}
+
+# Assembly
+- {name: Assembly.swift, path: widget/Code/assembly.swift.liquid}
+
+# Presenter layer
+- {name: Presenter.swift, path: widget/Code/presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor.swift, path: widget/Code/interactor.swift.liquid}
+
+# Router layer
+- {name: Router.swift, path: widget/Code/router.swift.liquid}
+
+# View
+- {name: View.swift, path: widget/Code/view.swift.liquid}
+
+# Worker
+- {name: Worker.swift, path: widget/Code/worker.swift.liquid}
+
+# State
+- {name: State.swift, path: widget/Code/state.swift.liquid}
+
+# DTO
+- {name: DTO.swift, path: widget/Code/dto.swift.liquid}
+
