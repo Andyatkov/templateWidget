@@ -1,0 +1,25 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol I{{ module_info.name }}Interactor {
+
+    func updateWidget(request: {{ module_info.name }}WidgetDTO.Request)
+}
+
+struct {{ module_info.name }}Interactor: I{{ module_info.name }}Interactor {
+
+    let worker: I{{ module_info.name }}Worker
+    let presenter: I{{ module_info.name }}Presenter
+
+    func updateWidget(request: {{ module_info.name }}WidgetDTO.Request) {
+        worker.update(widget: request.widget) { data in
+            self.presenter.presentWidget(response: {{ module_info.name }}WidgetDTO.Response(widgetData: data))
+        }
+    }
+
+}

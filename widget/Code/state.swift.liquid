@@ -1,0 +1,25 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Composer
+
+protocol I{{ module_info.name }}WidgetState: AnyObject {
+
+    var widget: Widget { get set }
+
+}
+
+final class {{ module_info.name }}WidgetState: I{{ module_info.name }}WidgetState {
+
+    var widget: Widget
+
+    init(widget: Widget) {
+        self.widget = widget
+    }
+
+}

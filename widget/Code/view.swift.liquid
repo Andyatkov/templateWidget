@@ -1,0 +1,49 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Common
+import Composer
+import UIKit
+
+protocol I{{ module_info.name }}View: AnyObject {
+
+    func showWidget(viewModel: {{ module_info.name }}WidgetDTO.ViewModel)
+}
+
+class {{ module_info.name }}View: UIView {
+
+    var interactor: I{{ module_info.name }}Interactor!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+}
+
+// MARK: - IWidgetViewConfigurable
+
+extension {{ module_info.name }}View: IWidgetViewConfigurable {
+
+    func update(widget: Widget) {
+        let request = {{ module_info.name }}WidgetDTO.Request(widget: widget)
+        interactor.updateWidget(request: request)
+    }
+
+    func layoutConstrainedTo(_ size: CGSize) {
+    }
+
+}
+
+// MARK: - ITitleWidgetView
+
+extension {{ module_info.name }}View: I{{ module_info.name }}View {
+
+    func showWidget(viewModel: {{ module_info.name }}WidgetDTO.ViewModel) {
+    }
+
+}

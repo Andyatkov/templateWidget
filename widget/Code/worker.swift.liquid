@@ -1,0 +1,25 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Composer
+
+protocol I{{ module_info.name }}Worker {
+
+    func update(widget: Widget, completion: @escaping ({{ module_info.name }}Widget) -> Void)
+}
+
+struct {{ module_info.name }}Worker: I{{ module_info.name }}Worker {
+
+    let state: I{{ module_info.name }}WidgetState
+
+    func update(widget: Widget, completion: @escaping ({{ module_info.name }}Widget) -> Void) {
+        state.widget = widget
+        completion(state.widget.model as! {{ module_info.name }}Widget)
+    }
+
+}

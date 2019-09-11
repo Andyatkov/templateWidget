@@ -1,0 +1,26 @@
+//
+//  {{ module_info.name }}Widget{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Composer
+
+enum {{ module_info.name }}WidgetDTO {
+
+    struct Request {
+
+        let widget: Widget
+    }
+
+    struct Response {
+
+        let widgetData: {{ module_info.name }}Widget
+    }
+
+    struct ViewModel {
+    }
+
+}
